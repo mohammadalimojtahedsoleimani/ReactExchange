@@ -1,18 +1,20 @@
-import React , { useEffect } from 'react';
+import React , { useEffect , useState } from 'react';
 import { getCoin } from "../services/api";
 
 const Landing = () => {
-    useEffect(()=>{
-        const fetchAPI = async ()=>{
-            const data =await getCoin();
-            console.log (data)
+    const [ coins , setCoins ] = useState ( [] );
+    useEffect ( () => {
+        const fetchAPI = async () => {
+            const data = await getCoin ();
+            console.log ( data )
+            setCoins ( data );
         }
-        fetchAPI();
-    },[])
+        fetchAPI ();
+    } , [] )
     return (
-        <div>
-
-        </div>
+        <>
+           <input type="te"/>
+        </>
     );
 };
 
