@@ -1,9 +1,10 @@
 import React from 'react';
+import Landing from "./components/Landing";
 
 const App = () => {
     return (
         <div>
-            <h1>Check</h1>
+            <Landing/>
         </div>
     );
 };
